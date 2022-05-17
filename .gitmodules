@@ -1,0 +1,3 @@
+[submodule "stm8_drv"]
+	path = stm8_drv
+	url = https://github.com/wdl83/stm8_drv
