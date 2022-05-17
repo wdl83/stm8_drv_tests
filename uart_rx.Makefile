@@ -8,10 +8,10 @@ include $(DRV)/Makefile.defs
 
 CFLAGS += -DSTM8S003F3P6
 
-TARGET = uart_test
+TARGET = uart_rx
 CSRCS = \
 		$(DRV)/drv/uart1.c \
-		uart_test.c
+		uart_rx.c
 
 include $(DRV)/Makefile.rules
 
