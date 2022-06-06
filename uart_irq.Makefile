@@ -6,7 +6,7 @@ CPPFLAGS += -I$(DRV)
 
 include $(DRV)/Makefile.defs
 
-CFLAGS += -DSTM8S003F3P6
+CFLAGS += -DSTM8S003F3
 
 TARGET = uart_irq
 CSRCS = \
