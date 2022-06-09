@@ -15,10 +15,11 @@ void main(void)
     UART1_PARITY_EVEN();
     UART1_TX_ENABLE();
 
+    uart1_send_str(__FILE__ "\n");
+
     for(;;)
     {
         char buf[32];
-        uart1_send_str(__FILE__ "\n");
         char *end = uart1_recv_str(buf, buf + sizeof(buf), '\r');
         uart1_send_str("recv:");
         uart1_send_str_r(buf, end);
