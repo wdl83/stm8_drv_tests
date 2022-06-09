@@ -1,6 +1,6 @@
 #include <drv/clk.h>
 #include <drv/tim4.h>
-#include <drv/uart1.h>
+#include <drv/uart1_async_tx.h>
 
 char buf[] =  __FILE__ "\n";
 uint8_t cnt = 0;
