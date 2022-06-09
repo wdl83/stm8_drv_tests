@@ -1,5 +1,6 @@
 #include <drv/clk.h>
-#include <drv/uart1.h>
+#include <drv/uart1_rx.h>
+#include <drv/uart1_tx.h>
 
 void main(void)
 {

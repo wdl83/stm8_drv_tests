@@ -1,19 +1,27 @@
 DRV = stm8_drv
-OBJ_DIR = obj
+BUILD_DIR = build
 
 CPPFLAGS += -I.
 CPPFLAGS += -I$(DRV)
 
 include $(DRV)/Makefile.defs
 
-CFLAGS += -DSTM8S003F3
+CFLAGS += \
+	-DSTM8S003F3 \
+	-DUART_DBG_CNTRS
 
 TARGET = uart_irq
-CSRCS = \
-		$(DRV)/drv/uart1.c \
-		uart_irq.c
+
+CSRCS = uart_irq.c
+
+LIBS_CSRCS = \
+	$(DRV)/drv/uart1_async_rx.c \
+	$(DRV)/drv/uart1_async_tx.c \
+	$(DRV)/drv/uart1_dbg.c \
+	$(DRV)/drv/uart1_tx.c \
+	$(DRV)/drv/util.c
 
 include $(DRV)/Makefile.rules
 
 clean:
-	rm $(OBJ_DIR) -rf
+	rm $(BUILD_DIR) -rf

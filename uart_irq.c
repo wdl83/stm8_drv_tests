@@ -2,7 +2,10 @@
 #include <string.h>
 
 #include <drv/clk.h>
-#include <drv/uart1.h>
+#include <drv/uart1_async_rx.h>
+#include <drv/uart1_async_tx.h>
+#include <drv/uart1_dbg.h>
+#include <drv/uart1_tx.h>
 
 bool rx_pred(const uint8_t *, uintptr_t);
 void tx_cb(uintptr_t);
